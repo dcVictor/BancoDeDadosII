@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// UFFS - CIÊNCIA DA COMPUTAÇÃO - CAMPUS CHAPECÓ
+// ESTUDANTE: VICTOR NEYMAR DE CONTO
+// COMPONENTE CURRICULAR: BANCO DE DADOS II
+
 #define MAX_ATRIBUTOS 10
 
 typedef struct { 
@@ -13,7 +17,7 @@ typedef struct {
 int main (int argc, char* argv[]){
 
     if (argc < 2) {
-       printf("Por favor, forneça o nome do arquivo: ./main <arquivo_dados>\n");
+       printf("Forneça o nome do arquivo: ./main <arquivo_dados>\n");
        return 0;
     }
 
@@ -23,11 +27,11 @@ int main (int argc, char* argv[]){
     FILE *arquivo_dados = fopen (nome_arquivo, "r");
     
     if (arquivo_dados == NULL) { 
-        printf("Erro na abertura do arquivo\n");
+        printf("Erro ao abrir o arquivo\n");
         exit(1);
 
     }else{
-        printf("Sucesso na abertura\n");
+        printf("Sucesso\n");
  
         Atributo vetor_atributos[MAX_ATRIBUTOS];
         Atributo atributo_temporario; 
@@ -36,7 +40,7 @@ int main (int argc, char* argv[]){
         for(quantidade_atributos=0; quantidade_atributos < MAX_ATRIBUTOS + 1; quantidade_atributos++){
             
             if (quantidade_atributos == 10){
-                printf("Programa não suporta mais de 10 atributos. =(");
+                printf("No máximo 10 atributos. =(");
                 exit(1);
             }
 
